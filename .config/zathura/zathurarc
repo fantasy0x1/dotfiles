@@ -1,0 +1,7 @@
+set font                    "Fira Code 12"
+set selection-notification	"true"
+set selection-clipboard		"clipboard"
+set adjust-open			    "width"
+
+include gruvbox-dark
+
