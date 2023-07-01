@@ -17,4 +17,8 @@ _WIP: I will be working on a script to install my dotfiles automatically, after 
 **Multiplexer:** [Tmux](https://github.com/tmux/tmux/) \
 **App Launcher:** [Rofi](https://github.com/davatorium/rofi)
 
+### Demo
+
+![](./showcase/screenshot01.png)
+
 <img src="https://user-images.githubusercontent.com/123886904/218294072-d474a330-7464-430a-b369-91f79373dbca.svg" width="100%" title="Footer">
