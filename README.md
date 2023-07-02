@@ -17,6 +17,36 @@ _WIP: I will be working on a script to install my dotfiles automatically, after 
 **Multiplexer:** [Tmux](https://github.com/tmux/tmux/) \
 **App Launcher:** [Rofi](https://github.com/davatorium/rofi)
 
+<br>
+
+<details>
+  <summary><b>BONUS:</b> Installing Bocchi Cursors</summary>
+  </br>
+  
+  > Using GTK tweak tool
+
+  - Install the .zip file called "**Bocchi-Linux**" from Kofi [here](https://ko-fi.com/s/6ba0d6b935)
+  - Unzip the downloaded file and rename the folder to "_bocchi-cursors_"
+  - Move entire folder to `/usr/share/icons`
+  - Use [lxappearance](https://github.com/lxde/lxappearance) to select cursor theme, and **done!**
+
+  > Without LXAppearance
+
+  - After renaming and moving the folder to `/usr/share/icons` you can create/change the `~/.icons/default/index.theme` file like this:
+  ```ini
+  [Icon Theme]
+  Name=Default
+  Comment=Default Cursor Theme
+  Inherits=bocchi-cursors
+  ```
+  and `~/.config/gtk-*/settings.ini`:
+  ```ini
+  [Settings]
+  gtk-cursor-theme-name=bocchi-cursors
+  ```
+  **Done!**
+</details>
+
 ### Demo
 
 ![](./showcase/screenshot01.png)
