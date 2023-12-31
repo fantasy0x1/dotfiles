@@ -1,0 +1,17 @@
+#!/bin/bash
+
+curl -s "https://api.hackertarget.com/hostsearch/?q=$1" | anew subs/subenum-subs.txt
+
+curl -s "https://otx.alienvault.com/api/v1/indicators/domain/$1/url_list?limit=100&page=1" | grep -o '"hostname": *"[^"]*' | sed 's/"hostname": "//' | sort -u | anew subs/subenum-subs.txt
+
+curl -s "https://www.threatcrowd.org/searchApi/v2/domain/report/?domain=$1" | jq -r '.subdomains' | grep -o "\w.*$1" | anew subs/subenum-subs.txt
+
+curl -s "https://jldc.me/anubis/subdomains/$1" | jq -r '.' | grep -o "\w.*$1" | anew subs/subenum-subs.txt
+
+curl -s "https://api.threatminer.org/v2/domain.php?q=$1&rt=5" | jq -r '.results[]' |grep -o "\w.*$1" | sort -u | anew subs/subenum-subs.txt
+
+curl -s "https://crt.sh/?q=%25.$1&output=json" | jq -r '.[].name_value' | sed 's/\*\.//g' | sort -u | anew subs/subenum-subs.txt
+
+curl -s "https://jldc.me/anubis/subdomains/$1" | grep -Po "((http|https):\/\/)?(([\w.-]*)\.([\w]*)\.([A-z]))\w+" | sort -u | anew subs/subenum-subs.txt
+
+curl -s "http://web.archive.org/cdx/search/cdx?url=*.$1/*&output=text&fl=original&collapse=urlkey" | sed -e 's_https*://__' -e "s/\/.*//" | sort -u | anew subs/subenum-subs.txt

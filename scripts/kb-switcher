@@ -1,0 +1,15 @@
+#!/bin/bash
+
+check=$(setxkbmap -print | awk -F"+" '/xkb_symbols/ {print $2}')
+
+if [ "$check" == "us" ]; then
+  setxkbmap br
+  new_layout="br"
+elif [ "$check" == "br" ]; then
+  setxkbmap us
+  new_layout="us"
+fi
+
+check_uppercase=$(echo "$new_layout" | tr '[:lower:]' '[:upper:]')
+notify-send -t 3000 -u normal --icon=/home/flame/.config/qtile/assets/keyboard.png "Keyboard Layout Switcher" "Layout changed to -> $check_uppercase"
+

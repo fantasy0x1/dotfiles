@@ -1,0 +1,19 @@
+#!/bin/python3
+# Auhtor: fant9sy <fant9sy@proton.me> <github@fantasy0x1>
+# Description: Transforms input bytes into Little-Endian values (From least to most significant byte)
+
+import struct
+import sys
+from colorama import Fore,Style
+
+if len(sys.argv) != 2:
+    print("Usage: python3 endian <hex_value>")
+    sys.exit(1)
+
+input_value = int(sys.argv[1], 16)
+
+little_endian_value = struct.pack('<I', input_value)
+
+little_endian_value_c = ''.join([f'\\x{b:02x}' for b in little_endian_value])
+
+print(f"[{Fore.GREEN}+{Style.RESET_ALL}] Little-Endian Value: {Fore.BLUE}{little_endian_value_c}{Style.RESET_ALL}")

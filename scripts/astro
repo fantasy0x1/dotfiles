@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+new_post() {
+  if [ -e "$post_filepath" ]; then
+    echo "[!] Post file already exists."
+    exit 1
+  fi
+
+  cat > ""
+}
+
+subcommand="$1"
+posts_dir="/home/flame/projects/deadspace-blog/src/content/post/"
+
+case "$subcommand" in
+    new)
+        new_post "${@:2}"
+        ;;
+    edit)
+        edit_post "${@:2}"
+        ;;
+    *)
+        echo "Subcomando inválido: $subcommand"
+        exit 1
+        ;;
+esac

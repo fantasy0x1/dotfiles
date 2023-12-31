@@ -3,16 +3,17 @@
 SETUVAR API_BASE:https\x3a//beta\x2esnusbase\x2ecom/v2/combo
 SETUVAR EDITOR:nvim
 SETUVAR __fish_initialized:3400
+SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_franciscolourenco_2F_done_files:\x7e/\x2econfig/fish/conf\x2ed/done\x2efish
-SETUVAR _fisher_plugins:franciscolourenco/done
+SETUVAR _fisher_plugins:franciscolourenco/done\x1eedc/bass
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:555
 SETUVAR fish_color_cancel:\x2d\x2dreverse
 SETUVAR fish_color_command:blue
 SETUVAR fish_color_comment:red
-SETUVAR fish_color_cwd:normal
+SETUVAR fish_color_cwd:red
 SETUVAR fish_color_cwd_root:red
-SETUVAR fish_color_end:green
+SETUVAR fish_color_end:red
 SETUVAR fish_color_error:brred
 SETUVAR fish_color_escape:brcyan
 SETUVAR fish_color_history_current:\x2d\x2dbold
@@ -29,7 +30,7 @@ SETUVAR fish_color_redirection:cyan\x1e\x2d\x2dbold
 SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_status:normal
-SETUVAR fish_color_user:brgreen
+SETUVAR fish_color_user:brred
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
 SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_background:\x1d
@@ -45,5 +46,5 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dreverse
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/flame/\x2espicetify
+SETUVAR fish_user_paths:~/\x2espicetify
 SETUVAR wordlists:/usr/share/wordlists/

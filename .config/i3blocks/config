@@ -1,0 +1,60 @@
+# i3blocks config file
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+command=~/.config/i3blocks/scripts/$BLOCK_NAME
+separator_block_width=10
+markup=none
+
+[iface]
+IFACE=tun0
+color=#FFFFFF
+interval=10
+separator=true
+
+[mediaplayer]
+label=󰎈 
+instance=spotify
+interval=5
+signal=10
+
+[bandwidth]
+INTERFACE=enp3s0
+interval=5
+
+[volume]
+#label=♪
+label=VOL 
+interval=once
+signal=10
+#STEP=5%
+
+[memory]
+label=MEM 
+interval=30
+
+[cpu_usage1]
+interval=10
+LABEL=CPU 
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+COLOR_NORMAL=#FFFFFF
+COLOR_WARN=#FFFFFF
+COLOR_CRIT=#FFFFFF
+
+[gpu-load1]
+label=GPU 
+interval=10
+#min_width=GPU 100% 100% 100% 100%
+#GPU_BRAND=NVIDIA // or AMD
+#T_WARN=70
+#T_CRIT=90
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=5
