@@ -6,7 +6,8 @@ mod = "mod4"
 control = "control"
 shift = "shift"
 alt = "mod1"
-terminal = "alacritty"
+# terminal = "alacritty --config-file /home/flame/.config/alacritty-bak/alacritty.yml"
+terminal = "wezterm"
 home = os.path.expanduser('~')
 
 # resize functions

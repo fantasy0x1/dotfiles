@@ -10,7 +10,7 @@ workspaces = [
     {"name": workspace_names[3], "key": "4", "matches": [Match(wm_class="discord")], "lay": "bsp"},
     {"name": workspace_names[4], "key": "5", "matches": [Match(wm_class="spotify")], "lay": "bsp"},
     {"name": workspace_names[5], "key": "6", "matches": [], "lay": "bsp"},
-    {"name": workspace_names[6], "key": "7", "matches": [Match(wm_class="brave")], "lay": "bsp"},
+    {"name": workspace_names[6], "key": "7", "matches": [], "lay": "bsp"},
     {"name": workspace_names[7], "key": "8", "matches": [], "lay": "bsp"},
     {"name": workspace_names[8], "key": "9", "matches": [Match(wm_class="ferdium")], "lay": "bsp"},
     {"name": workspace_names[9], "key": "0", "matches": [Match(wm_class="osu-wine")], "lay": "bsp"},
@@ -48,8 +48,8 @@ groups.append(
         [
             DropDown(
                 'term',
-                '/usr/bin/alacritty',
-                opacity=0.8,
+                ['/usr/bin/alacritty', '--config-file', '/home/flame/.config/alacritty-bak/alacritty.yml'],
+                opacity=0.8, 
                 x=0.1,
                 y=0.13,
                 width=0.8,
@@ -58,7 +58,7 @@ groups.append(
             ),
             DropDown(
                 'brws',
-                ['/usr/bin/firefox', '--new-instance'],
+                ['qutebrowser', 'duckduckgo.com', '-R', '--target', 'tab-bg'],
                 opacity=0.8,
                 x=0.1,
                 y=0.08,

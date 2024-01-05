@@ -34,7 +34,7 @@ def create_bar(extra_bar = False):
             clock_icon, w_clock,
             gen_separator(25,50),
         ],
-        36,
+        32,
         margin=[0, 0, 4, 0],
         background="#000000", opacity=0.8,
     )

@@ -11,4 +11,4 @@ elif [ "$check" == "br" ]; then
 fi
 
 check_uppercase=$(echo "$new_layout" | tr '[:lower:]' '[:upper:]')
-notify-send -t 3000 -u normal --icon=/home/flame/.config/qtile/assets/keyboard.png "Keyboard Layout Switcher" "Layout changed to -> $check_uppercase"
+notify-send -t 3000 -u normal --icon=~/.config/qtile/assets/keyboard.png "Keyboard Layout Switcher" "Layout changed to -> $check_uppercase"

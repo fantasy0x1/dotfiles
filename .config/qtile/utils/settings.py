@@ -40,5 +40,5 @@ workspace_names = [
 
 network_if = "enp3s0"
 wallpaper_main = "~/Pictures/wallpapers/anime/dark/horror.png"
-wallpaper_sec = "~/Pictures/wallpapers/justblack.jpg" # vertical monitor
+wallpaper_sec = "~/Pictures/wallpapers/anime/dark/horror.png" # vertical monitor
 two_monitors = True
