@@ -1,0 +1,15 @@
+#!/bin/bash
+# Author: Fantasy <fant9sy@deadspace.wtf>
+# Description: Automates domain dumping from a cloudflare account, following Celesian's article method. (https://celes.in/posts/cloudflare_ns_whois)
+
+whoisxmlapi_key="at_9V2Vhj1x9yk8TrJqRHJV2H6QmNR4p"
+domain=$1
+
+get_cf_ns=$(dig NS $domain +short)
+cf_nameservers=()
+
+while read -r line; do
+  cf_nameservers+=("${line%.}")
+done <<< "$get_cf_ns"
+
+curl -s https://reverse-whois.whoisxmlapi.com/api/v2 --data '{"apiKey":"'$whoisxmlapi_key'","searchType":"current","mode":"purchase","advancedSearchTerms":[{"field":"NameServers","term":"'${cf_nameservers[0]}'"},{"field":"NameServers","term":"'${cf_nameservers[1]}'"}]}' | jq .domainsList[] -r | grep -i $(echo $domain | awk -F. '{print $1}') 
