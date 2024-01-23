@@ -6,7 +6,7 @@ source /home/flame/.config/fish/cyber.fish
 # Environment
 set fish_greeting
 #pokemon-colorscripts -r --no-title
-set -x PATH /home/flame/.local/share/gem/ruby/3.0.0/bin /home/flame/.cargo/bin/ /home/flame/.local/bin/ /home/flame/go/bin /home/flame/scripts $PATH
+set -x PATH /home/flame/Android/Sdk/platform-tools/ /home/flame/.local/share/gem/ruby/3.0.0/bin /home/flame/.cargo/bin/ /home/flame/.local/bin/ /home/flame/go/bin /home/flame/scripts $PATH
 
 # ──────── 《 Abbreviations 》 ────────
 abbr ifc ifconfig
@@ -40,6 +40,7 @@ alias wttr='curl wttr.in'
 alias hextod='printf "%d\n"'
 alias rmexif='exiftool -all='
 alias cfg='cd ~/.config/'
+alias diff='difft'
 
 # Git
 alias gist='gh gist create'
@@ -52,8 +53,8 @@ alias du='dust'
 alias ip='ip -color=auto'
 alias dmesg='dmesg --color=always'
 alias ping='prettyping'
-alias cat='bat'
-alias catp='bat --paging=never'
+alias cat='bat --plain --decorations never --paging never'
+alias catp='bat --paging always'
 alias df='duf -hide-fs squashfs'
 alias free='free -h'
 
@@ -98,12 +99,12 @@ alias fehbgr='feh --bg-fill $(shuf -n 1 -e ~/Pictures/wallpapers/dark/*) --bg-fi
 alias frenzch='~/frenzch.sh/frenzch.sh'
 alias clock='tty-clock -c -C4'
 
-# "ls" to "exa"
+# "ls" to "eza"
 alias sl='ls'
-alias ls='exa --icons --color=always --group-directories-first' 
-alias l='exa --icons --color=always --group-directories-first' 
-alias la='exa --icons -laF --octal-permissions --color=always --group-directories-first'
-alias ll='exa --icons -lF --octal-permissions --color=always --group-directories-first'
+alias ls='eza --icons --color=always --group-directories-first' 
+alias l='eza --icons --color=always --group-directories-first' 
+alias la='eza --icons -laF --octal-permissions --color=always --group-directories-first'
+alias ll='eza --icons -lF --octal-permissions --color=always --group-directories-first'
 alias lsize='/usr/bin/du -hs * | sort -hr | less'
 
 # Package managers

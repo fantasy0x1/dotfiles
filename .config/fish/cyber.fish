@@ -15,6 +15,7 @@ alias libc64f='readelf -s /usr/lib/libc.so.6 | grep'
 alias libc32s='strings -a -t x /usr/lib32/libc.so.6 | grep'
 alias libc64s='strings -a -t x /usr/lib/libc.so.6 | grep'
 alias lmk='lemmeknow'
+alias pwntemplate='cat ~/0x/archive/xpl/pwn/template.py'
 
 # ──────── 《 Abbreviations 》 ────────
 abbr -a rs "rustscan --ulimit 5000 -a"
