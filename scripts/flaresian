@@ -12,4 +12,4 @@ while read -r line; do
   cf_nameservers+=("${line%.}")
 done <<< "$get_cf_ns"
 
-curl -s https://reverse-whois.whoisxmlapi.com/api/v2 --data '{"apiKey":"'$whoisxmlapi_key'","searchType":"current","mode":"purchase","advancedSearchTerms":[{"field":"NameServers","term":"'${cf_nameservers[0]}'"},{"field":"NameServers","term":"'${cf_nameservers[1]}'"}]}' | jq .domainsList[] -r | grep -i $(echo $domain | awk -F. '{print $1}') 
+curl -s https://reverse-whois.whoisxmlapi.com/api/v2 --data '{"apiKey":"'$whoisxmlapi_key'","searchType":"current","mode":"purchase","advancedSearchTerms":[{"field":"NameServers","term":"'${cf_nameservers[0]}'"},{"field":"NameServers","term":"'${cf_nameservers[1]}'"}]}' | jq .domainsList[] -r | grep -i ^$(echo $domain | awk -F. '{print $1}') 
