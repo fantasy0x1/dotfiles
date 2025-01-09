@@ -5,7 +5,7 @@ I ask that those who want to use most of the settings, to **fork this repository
 
 **Warning:** Don’t blindly use my settings unless you know what that entails. Use at your own risk!
 
-## My Setup
+## Linux Setup
 **Distro:** [Arch Linux](https://archlinux.org/download/) \
 **WM:** [Qtile](https://github.com/qtile/qtile) & [i3-wm](https://github.com/i3/i3) \
 **Compositor:** [Picom (fdev31)](https://github.com/fdev31/picom) \
@@ -15,6 +15,13 @@ I ask that those who want to use most of the settings, to **fork this repository
 **Editor:** [NvChad](https://github.com/NvChad/NvChad) \
 **Multiplexer:** [Tmux](https://github.com/tmux/tmux/) \
 **App Launcher:** [Rofi](https://github.com/davatorium/rofi) & [dmenu](https://tools.suckless.org/dmenu/)
+
+## MacOS Setup
+**Version:** MacOS Ventura 13.5 \
+**Shell:** ZSH \
+**Terminal:** iTerm2 \
+**Editor:** VSCode & default Vim \
+**App Launcher:** Raycast
 
 <details>
   <summary><b>BONUS:</b> Installing Bocchi Cursors</summary>
